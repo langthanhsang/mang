@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="từ điển">
+<input type="button" value="dich" onclick="check()">
+<p id="result" ></p>
+<script>
+    function check() {
+        let inter = document.getElementById("từ điển").value;
+        let tiengviet = ["meo", "cho", "ga", "lon",];
+        let english = ["cat", "dog", "chicken", "pig"];
+        let flag = true;
+        for(i = 0; i < tiengviet.length; i++) {
+            if( tiengviet[i] === inter) {
+                flag = false
+                document.getElementById("result").innerHTML=english[i];
+                break;
+            }
+            if (english[i] === inter) {
+                flag = false
+                document.getElementById("result").innerHTML = tiengviet[i];
+            }
+            }
+           if (flag === true) {
+            document.getElementById("khong co trong tu dien");
+        }
+    }
+
+</script>
+
+</body>
+
+</html>
